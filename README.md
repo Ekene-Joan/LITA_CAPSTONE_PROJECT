@@ -14,7 +14,7 @@ The data retrieved was a CSV data set that comprises of two main data:
 
 ### Project Objective
 ---
-To gain a comprehensive understanding of the sales performance and customer trends, we can extract key insights by analyzing the data based on the following questions:
+To gain a comprehensive understanding of sales performance and customer trends, we can extract key insights by analyzing the data based on the following questions:
 
 - Retrieve the total sales for each product category.
 - Find the number of sales transactions in each region.
@@ -66,5 +66,53 @@ This is the analysis where the data is explored to answer some questions which i
   
       1) ```=K13/SUM($K$13:$K$16)```
 
-### Data Analysis
+### Visual Analysis and Inference
 --- 
+This visual presentation showcases the analysis conducted using Excel functions, pivot tables, and SQL queries. By performing parallel analyses with both tools, we validate data accuracy and ensure the reliability of the results.
+
+1) Excel Pivot
+
+
+2) SQL Query
+   
+- Total Sales by each product category.
+  
+```SQL
+select * from sales;
+
+SELECT Product, SUM(SalesAmount) AS TotalSales FROM Sales
+GROUP BY Product;
+```
+
+-  Number of sales transactions in each region.
+
+```SQL
+select* from sales;
+
+SELECT Region, count(OrderID) AS no_of_sales_transaction
+FROM Sales
+GROUP BY Region;
+```
+
+- Highest-selling product by total sales value.
+  
+```SQL
+select * from sales;
+
+SELECT product, SUM(SalesAmount) AS TotalSales
+FROM sales
+GROUP BY product
+ORDER BY TotalSales DESC
+LIMIT 1;
+```
+- Total revenue per product.
+
+```SQL
+SELECT * FROM SALES;
+
+SELECT PRODUCT, SUM(SALESAMOUNT) AS TOTAL_REVENUE
+FROM SALES
+GROUP BY PRODUCT;
+```
+-  Monthly sales totals for the current year(2024)
+```SQL
