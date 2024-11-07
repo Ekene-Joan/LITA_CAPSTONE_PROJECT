@@ -12,6 +12,18 @@ The data retrieved was a CSV data set that comprises of two main data:
 - The sales data: which includes information on order ID, customer ID, product, region, order date, quantity, and unit price
 - The Customer data: which has in it the Customer ID, customer name, subscription type, subscription start date, and end date, canceled, and revenue.
 
+### Project Objective
+---
+To gain a comprehensive understanding of the sales performance and customer trends, we can extract key insights by analyzing the data based on the following questions:
+
+- Retrieve the total sales for each product category.
+- Find the number of sales transactions in each region.
+- Identify the highest-selling product by total sales value.
+- Calculate total revenue per product.
+- Calculate monthly sales totals for the current year.
+- Find the top 5 customers by total purchase amount.
+- Calculate the percentage of total sales contributed by each region.
+- Identify products with no sales in the last quarter.
 
 ### Tools Used
 --- 
@@ -30,13 +42,29 @@ In this phase of data cleaning, the following are performed:
   
 - Data Wrangling and formatting.
 
-### Exploratory Data Analysis
+### Exploratory Data Analysis and Formula used
 --- 
-This is the analysis where the data is explored to answer some questions which includes:
+This is the analysis where the data is explored to answer some questions which include:
+
 - Total sales by product, region, and month.
+  
+      1) ```=SUMIF(Sales4[Product],"Gloves",Sales4[SalesAmount])```
+  
+      2) ```=SUMIF(Sales4[Region],"East",Sales4[SalesAmount])```
+  
+      3) ```=SUMIF(Sales4[Orderdate],"2023-Jan",Sales4[SalesAmount])```
+  
 - Average sales per product
+  
+      1) ```AVERAGEIF(Sales4[Product],"Gloves",Sales4[SalesAmount])```
+  
 - Total revenue by region.
-- Percentage sales amount by year
+  
+      1) ```=SUMIF(Sales4[Region],"East",Sales4[SalesAmount])```
+  
+- Percentage sales amount by region
+  
+      1) ```=K13/SUM($K$13:$K$16)```
 
 ### Data Analysis
 --- 
