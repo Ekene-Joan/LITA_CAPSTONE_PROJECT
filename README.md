@@ -85,6 +85,28 @@ This visual presentation showcases the analysis conducted using Excel functions,
 1) Excel Pivot
 
 
+![pivot 3](https://github.com/user-attachments/assets/646bd894-f652-47b8-8fce-d22794b61dd6)
+
+
+- The sales data by product category shows that Shoes, Shirts, and Hats are the top performers, together accounting for 67.4% of total sales, with Shoes leading at 29.2%. In contrast, Socks and Jackets have the lowest sales, contributing just 8.6% and 9.9%, respectively. This suggests that while a few products drive most of the revenue, there is potential to increase sales for the lower-performing items through targeted marketing or promotions.
+
+
+- The total sales by region reveal that the South region generates the highest sales, contributing 927,820, which accounts for approximately 44.2% of the grand total. The East region follows with 485,925, making up about 23.1% of total sales. North and West regions contribute 387,000 and 300,345 respectively, with sales shares of 18.4% and 14.3%. Together, the South and East regions account for 67.3% of the total sales, indicating they are the strongest markets. The overall grand total sales stand at 2,101,090, with the South region being the dominant contributor.
+
+
+- The average sales by region reveal notable regional performance differences. The South region leads with an average sales amount of 374, significantly higher than the other regions, indicating stronger sales performance. In contrast, the West region shows the lowest average sales at 121, suggesting weaker sales in that area. The East and North regions show average sales of 196 and 156, respectively, which are above the West but still lag behind the South. The overall Grand Total average of 212 suggests that while some regions perform better, there may be a need to focus on boosting sales in the West and North regions to reach a more balanced overall performance.
+
+
+- The number of sales transactions is fairly consistent across all regions, with the East having the highest count at 2,483 orders, closely followed by the North at 2,481, the South at 2,480, and the West at 2,477. Together, these regions contribute to a total of 9,921 sales transactions. This distribution indicates balanced sales activity across all regions, with no significant variation in the number of transactions per region.
+
+
+- The total sales across the months show significant fluctuations. February stands out with the highest sales of 546,300, while months like March, April, September, and December show lower sales, with September being the weakest at 34,720. The sales are relatively consistent from January to June, but there’s a noticeable drop starting in September and continuing through December. Despite this, the grand total of 2,101,090 indicates a strong overall performance, with a few peak months driving the majority of the revenue. The data suggests that sales tend to dip in the latter half of the year, particularly after the mid-point.
+
+
+- In 2023, the average sales amount was 186, generating a total revenue of 1,105,330, which accounted for 52.61% of the grand total. In contrast, 2024 saw an increase in the average sales amount to 251, but total revenue dropped to 995,760, contributing 47.39% of the overall revenue. This suggests that while the sales amount per transaction increased in 2024, the overall revenue declined, potentially due to fewer transactions or changes in customer behavior. Together, both years contributed to the grand total of 2,101,090 in sales.
+
+
+- In comparing the months of 2023 and 2024, there is a noticeable increase in average sales, with 2024 showing higher overall performance. The 2024 total revenue of 995,760 represents 47.39% of the grand total, while 2023 was 1,105,330, accounting for 52.61%. However, 2024 experienced strong months, such as February with 298,800, significantly outpacing 2023's 247,500. January also saw a major boost, increasing from 49,600 in 2023 to 198,400 in 2024, reflecting a substantial improvement. On the downside, July 2024 shows a significant drop to 37,200, compared to 237,600 in 2023, highlighting a marked difference in performance in this particular month. Overall, 2024 saw a consistent rise in monthly sales, except for a dip in July, which suggests strong growth in the early months of the year and more fluctuation in the latter half.
 
 
 
