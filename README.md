@@ -85,22 +85,37 @@ This visual presentation showcases the analysis conducted using Excel functions,
 1) Excel Pivot
 
 
-![pivot 3](https://github.com/user-attachments/assets/646bd894-f652-47b8-8fce-d22794b61dd6)
+![pivot 4](https://github.com/user-attachments/assets/aa2904e3-f973-4727-8f5d-0720fb2e4180)
 
 
 - The sales data by product category shows that Shoes, Shirts, and Hats are the top performers, together accounting for 67.4% of total sales, with Shoes leading at 29.2%. In contrast, Socks and Jackets have the lowest sales, contributing just 8.6% and 9.9%, respectively. This suggests that while a few products drive most of the revenue, there is potential to increase sales for the lower-performing items through targeted marketing or promotions.
 
 
+![revenue by product graph](https://github.com/user-attachments/assets/049bfb21-8f17-43fc-b14b-d692ccee89b0)
+
+
 - The total sales by region reveal that the South region generates the highest sales, contributing 927,820, which accounts for approximately 44.2% of the grand total. The East region follows with 485,925, making up about 23.1% of total sales. North and West regions contribute 387,000 and 300,345 respectively, with sales shares of 18.4% and 14.3%. Together, the South and East regions account for 67.3% of the total sales, indicating they are the strongest markets. The overall grand total sales stand at 2,101,090, with the South region being the dominant contributor.
+
+
+![revenue by region graph](https://github.com/user-attachments/assets/5ae2c997-bbd4-4c48-ae69-50fd1e5cc77b)
 
 
 - The average sales by region reveal notable regional performance differences. The South region leads with an average sales amount of 374, significantly higher than the other regions, indicating stronger sales performance. In contrast, the West region shows the lowest average sales at 121, suggesting weaker sales in that area. The East and North regions show average sales of 196 and 156, respectively, which are above the West but still lag behind the South. The overall Grand Total average of 212 suggests that while some regions perform better, there may be a need to focus on boosting sales in the West and North regions to reach a more balanced overall performance.
 
 
+![avg sales by region graph](https://github.com/user-attachments/assets/61e1049d-300f-4eed-82f7-eb0ae2d87769)
+
+
 - The number of sales transactions is fairly consistent across all regions, with the East having the highest count at 2,483 orders, closely followed by the North at 2,481, the South at 2,480, and the West at 2,477. Together, these regions contribute to a total of 9,921 sales transactions. This distribution indicates balanced sales activity across all regions, with no significant variation in the number of transactions per region.
 
 
+![no of sales by region graph](https://github.com/user-attachments/assets/a34cf089-5624-49ad-93e0-da26d5143e06)
+
+
 - The total sales across the months show significant fluctuations. February stands out with the highest sales of 546,300, while months like March, April, September, and December show lower sales, with September being the weakest at 34,720. The sales are relatively consistent from January to June, but there’s a noticeable drop starting in September and continuing through December. Despite this, the grand total of 2,101,090 indicates a strong overall performance, with a few peak months driving the majority of the revenue. The data suggests that sales tend to dip in the latter half of the year, particularly after the mid-point.
+
+
+![line graph](https://github.com/user-attachments/assets/2f501891-1b44-4901-aa9e-339d3bd7a3f6)
 
 
 - In 2023, the average sales amount was 186, generating a total revenue of 1,105,330, which accounted for 52.61% of the grand total. In contrast, 2024 saw an increase in the average sales amount to 251, but total revenue dropped to 995,760, contributing 47.39% of the overall revenue. This suggests that while the sales amount per transaction increased in 2024, the overall revenue declined, potentially due to fewer transactions or changes in customer behavior. Together, both years contributed to the grand total of 2,101,090 in sales.
@@ -132,6 +147,9 @@ FROM Sales
 GROUP BY Region;
 ```
 
+![no sales trans by region sql](https://github.com/user-attachments/assets/f1b2aba9-5fc9-45d0-a7d8-767b90918260)
+
+
 - Highest-selling product by total sales value.
   
 ```SQL
@@ -143,6 +161,10 @@ GROUP BY product
 ORDER BY TotalSales DESC
 LIMIT 1;
 ```
+
+![highest selling pro sql](https://github.com/user-attachments/assets/0720f617-b41b-4f40-90c2-c9feb2093265)
+
+
 - Total revenue per product.
 
 ```SQL
@@ -160,6 +182,10 @@ FROM sales
 WHERE (orderdate) = 2024
 GROUP BY orderdate;
 ```
+
+![current year sales sql](https://github.com/user-attachments/assets/9dcbef4d-2824-4bac-91a2-d976b6e18efd)
+
+
 - The top 5 customers by total purchase amount
   
 ``` SQL
@@ -174,6 +200,10 @@ ORDER BY
     total_purchase_amount DESC
 LIMIT 5;
 ```
+
+![Top 5 cus sql](https://github.com/user-attachments/assets/23b39570-88d2-41c1-9cfb-a87be97c184a)
+
+
 - % Percentage of Total sales by each region
 ```SQL
 
@@ -192,7 +222,7 @@ ORDER BY
 ![% sql](https://github.com/user-attachments/assets/714a191a-7bb3-4760-883b-bdd79b8a26c4)
 
 
-![% pie chart](https://github.com/user-attachments/assets/277a00a0-3617-4073-93e2-b818806c7fa5)
+![% pie 2](https://github.com/user-attachments/assets/638a8da4-2bc0-4f8c-9c74-c0f86cdb1fed)
 
 
 - Identify products with no sales in the last quarter
@@ -205,5 +235,8 @@ WHERE s.orderdate in ('2024-may','2024-jun', '2024-jul', '2024-Aug')
 GROUP BY s.product, s.orderdate
 HAVING SUM(CASE WHEN s.orderdate BETWEEN '2024-05-01' AND '2024-08-31' THEN s.salesamount ELSE 0 END) = 0;
 ```
+
+![identify sql](https://github.com/user-attachments/assets/534ab3b9-f7ef-47a1-ac85-8ea4cfef62a3)
+
 
 ## 
