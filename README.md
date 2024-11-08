@@ -189,7 +189,10 @@ ORDER BY
     Percentage_of_Total_Sales  DESC;
 ```
 
+![% sql](https://github.com/user-attachments/assets/714a191a-7bb3-4760-883b-bdd79b8a26c4)
 
+
+![% pie chart](https://github.com/user-attachments/assets/277a00a0-3617-4073-93e2-b818806c7fa5)
 
 
 - Identify products with no sales in the last quarter
