@@ -84,7 +84,8 @@ This visual presentation showcases the analysis conducted using Excel functions,
 
 1) Excel Pivot
 
-![TOTAL SALES BY PRO PIVOT 1](https://github.com/user-attachments/assets/9d0a1cb8-dc3d-4409-9ff8-b71424ea1330)
+
+
 
 
 2) SQL Query
