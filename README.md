@@ -8,9 +8,21 @@ This project aims to comprehensively review a retail store's sales data to ident
 
 ### Data Sources
 --- 
-The data retrieved was a CSV data set that comprises of two main data:
-- The sales data: which includes information on order ID, customer ID, product, region, order date, quantity, and unit price
-- The Customer data: which has in it the Customer ID, customer name, subscription type, subscription start date, and end date, canceled, and revenue.
+The data retrieved was a CSV sales data set that comprises information on the following column:
+
+- Order ID: A unique identifier for each order, often a numeric or alphanumeric code, used to track and reference individual transactions.
+
+- Customer ID: A unique identifier assigned to each customer to track their orders, history, and preferences in the system.
+
+- Product: The item or service being purchased by the customer, usually identified by its name or SKU (Stock Keeping Unit) in the catalog.
+
+- Region: The geographical area where the order is being placed or delivered, helping with logistics, reporting, and market analysis.
+
+- Order Date: The date when the customer placed the order, important for tracking timelines, processing, and analysis of order patterns.
+
+- Quantity: The number of units of the product being ordered, helping calculate the total cost and manage inventory.
+
+- Unit Price: The cost per single unit of the product, used in calculating the total price of the order based on quantity.
 
 ### Project Objective
 ---
@@ -97,7 +109,7 @@ GROUP BY Region;
 - Highest-selling product by total sales value.
   
 ```SQL
-select * from sales;
+SELECT * FROM sales;
 
 SELECT product, SUM(SalesAmount) AS TotalSales
 FROM sales
@@ -115,4 +127,49 @@ FROM SALES
 GROUP BY PRODUCT;
 ```
 -  Monthly sales totals for the current year(2024)
+  
 ```SQL
+SELECT orderdate, sum(salesamount) as totalsales
+FROM sales
+WHERE (orderdate) = 2024
+GROUP BY orderdate;
+```
+- The top 5 customers by total purchase amount
+  
+``` SQL
+SELECT 
+    Customerid As Customer,
+    SUM(salesamount) AS Total_purchase_amount
+FROM 
+   sales
+GROUP BY 
+    customerid
+ORDER BY 
+    total_purchase_amount DESC
+LIMIT 5;
+```
+- % Percentage of Total sales by each region
+```SQL
+
+SELECT 
+    region,
+    SUM(salesamount) AS Total_Sales,
+    ROUND(SUM(salesamount) * 100.0 / (SELECT SUM(salesamount) FROM sales), 2) AS Percentage_of_Total_Sales
+FROM 
+    sales
+GROUP BY 
+    region
+ORDER BY 
+    Percentage_of_Total_Sales  DESC;
+```
+
+- Identify products with no sales in the last quarter
+  
+``` SQL
+SELECT s.orderdate, s.product,
+       SUM(CASE WHEN s.orderdate BETWEEN '2024-05-01' AND '2024-08-31' THEN s.salesamount ELSE 0 END) AS total_sales
+FROM sales s
+WHERE s.orderdate in ('2024-may','2024-jun', '2024-jul', '2024-Aug')
+GROUP BY s.product, s.orderdate
+HAVING SUM(CASE WHEN s.orderdate BETWEEN '2024-05-01' AND '2024-08-31' THEN s.salesamount ELSE 0 END) = 0;
+```
