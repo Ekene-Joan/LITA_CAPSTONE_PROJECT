@@ -78,7 +78,7 @@ This is the analysis where the data is explored to answer some questions which i
   
       1) ```=K13/SUM($K$13:$K$16)```
 
-### Visual Analysis and Inference
+## Visual Analysis and Inference
 --- 
 This visual presentation showcases the analysis conducted using Excel functions, pivot tables, and SQL queries. By performing parallel analyses with both tools, we validate data accuracy and ensure the reliability of the results.
 
@@ -189,6 +189,9 @@ ORDER BY
     Percentage_of_Total_Sales  DESC;
 ```
 
+
+
+
 - Identify products with no sales in the last quarter
   
 ``` SQL
@@ -199,3 +202,5 @@ WHERE s.orderdate in ('2024-may','2024-jun', '2024-jul', '2024-Aug')
 GROUP BY s.product, s.orderdate
 HAVING SUM(CASE WHEN s.orderdate BETWEEN '2024-05-01' AND '2024-08-31' THEN s.salesamount ELSE 0 END) = 0;
 ```
+
+## 
