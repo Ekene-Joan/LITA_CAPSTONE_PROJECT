@@ -1,5 +1,5 @@
 # LITA_CAPSTONE_PROJECT
-## Project Title: Sales Performance Analysis
+## Project Title: Retail Store Sales Performance Analysis
 
 
 ### Project Overview
